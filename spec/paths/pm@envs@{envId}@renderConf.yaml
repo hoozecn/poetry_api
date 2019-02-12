@@ -1,0 +1,31 @@
+parameters:
+  - name: envId
+    in: query
+    description: 环境ID
+    required: true
+    schema:
+      type: integer
+post:
+  security:
+    - ApiKeyAuth: []
+    - ApiRootKeyAuth: []
+  tags:
+    - ProductManager
+  summary: 批量渲染服务配置
+  responses:
+    '200':
+      description: 渲染成功,tar.gz包,包含该环境下所有完成渲染的配置文件
+      content:
+        application/tar+gzip:
+          description: 包含该服务下所有完成渲染的配置文件
+      headers:
+        Content-Disposition:
+          schema:
+            type: string
+          description: '文件名 ex: attachment; filename="filename.tar.gz"'
+    '400':
+      description: 渲染失败
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ActionResult'
