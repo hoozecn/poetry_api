@@ -1,6 +1,6 @@
 parameters:
   - name: envId
-    in: query
+    in: path
     description: 环境ID
     required: true
     schema:
@@ -15,14 +15,15 @@ post:
   responses:
     '200':
       description: 渲染成功,tar.gz包,包含该环境下所有完成渲染的配置文件
-      content:
-        application/tar+gzip:
-          description: 包含该服务下所有完成渲染的配置文件
       headers:
         Content-Disposition:
           schema:
             type: string
           description: '文件名 ex: attachment; filename="filename.tar.gz"'
+        Content-Type:
+          schema:
+            type: string
+          description: application/tar+gzip
     '400':
       description: 渲染失败
       content:
