@@ -1,26 +1,26 @@
 parameters:
-  - name: productId
+  - name: envId
     in: query
-    description: 产品ID
+    description: 环境ID
     required: true
     schema:
-      type: integer
+      type: string
 put:
   security:
     - ApiKeyAuth: []
     - ApiRootKeyAuth: []
   tags:
     - ProductManager
-  summary: 更新产品环境变量(全量)
+  summary: 全量更新环境变量, 覆盖默认值
   requestBody:
-    description: 添加产品环境变量请求
+    description: 更新环境变量请求
     content:
       application/json:
         schema:
-          $ref: "#/components/schemas/ProductVarBatchUpdateRequest"
+          $ref: "#/components/schemas/EnvVarBatchUpdateRequest"
   responses:
     '200':
-      description: 添加成功
+      description: 更新成功
       content:
         application/json:
           schema:

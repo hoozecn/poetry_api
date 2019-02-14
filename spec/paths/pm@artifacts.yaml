@@ -1,7 +1,7 @@
 parameters:
-  - name: confId
-    in: path
-    description: 服务配置ID
+  - name: serviceId
+    in: query
+    description: 服务ID
     required: true
     schema:
       type: integer
@@ -14,14 +14,14 @@ get:
   parameters:
     - $ref: "#/components/parameters/page"
     - $ref: "#/components/parameters/per_page"
-  summary: 服务配置历史纪录(支持分页)
+  summary: 服务的应用包列表(支持分页)
   responses:
     '200':
-      description: 服务配置历史记录列表
+      description: 获取成功
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/ServiceConfRevisionListResponse'
+            $ref: '#/components/schemas/ArtifactListResponse'
       headers:
         X-Total:
           $ref: "#/components/headers/X-Total"

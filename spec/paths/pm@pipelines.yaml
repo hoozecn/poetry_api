@@ -1,0 +1,21 @@
+parameters:
+  - name: productId
+    in: query
+    description: 产品Id
+    required: true
+    schema:
+      type: integer
+get:
+  security:
+    - ApiKeyAuth: []
+    - ApiRootKeyAuth: []
+  tags:
+    - ProductManager
+  summary: 获取工作流列表
+  responses:
+    '200':
+      description: 获取成功
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/PipelineListResponse'

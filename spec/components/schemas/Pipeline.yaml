@@ -1,0 +1,17 @@
+type: object
+properties:
+  id:
+    type: integer
+    description: 工作流ID
+  name:
+    type: string
+    description: 工作流名称
+  desc:
+    type: string
+    description: 工作流描述
+  env:
+    $ref: "#/components/schemas/Env"
+  stages:
+    type: array
+    items:
+      $ref: "#/components/schemas/Stage"
