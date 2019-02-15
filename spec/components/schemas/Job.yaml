@@ -84,34 +84,32 @@ properties:
         type: array
         items:
           type: object
-          repository:
-            type: object
-            description: 代码库
-            properties:
-              codehost:
-                type: object
-                properties:
-                  id:
-                    type: integer
-                    description: 代码库ID
-                  address:
-                    type: string
-                    description: 代码库地址
-                  type:
-                    type: string
-                    enum: ['gitlab', 'github']
-              namespace:
-                type: string
-                description: 命名空间 (user/group)
-              name:
-                type: string
-                description: 代码库名称
-              branch:
-                type: string
-                description: 分支名
-              submodule:
-                type: boolean
-                description: 是否同步子模块
+          description: 代码库
+          properties:
+            codehost:
+              type: object
+              properties:
+                id:
+                  type: integer
+                  description: 代码库ID
+                address:
+                  type: string
+                  description: 代码库地址
+                type:
+                  type: string
+                  enum: ['gitlab', 'github']
+            namespace:
+              type: string
+              description: 命名空间 (user/group)
+            name:
+              type: string
+              description: 代码库名称
+            branch:
+              type: string
+              description: 分支名
+            submodule:
+              type: boolean
+              description: 是否同步子模块
   deployConf:
     type: object
     description: 部署配置

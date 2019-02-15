@@ -31,7 +31,7 @@ patch:
     content:
       application/json:
         schema:
-          $ref: "#/components/schemas/ProductUpdateRequest"
+          $ref: "#/components/schemas/ProductUpsertRequest"
   responses:
     '200':
       description: 更新成功
