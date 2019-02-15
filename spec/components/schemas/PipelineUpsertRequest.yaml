@@ -1,0 +1,14 @@
+type: object
+properties:
+  name:
+    type: string
+    description: 工作流名称
+  desc:
+    type: string
+    description: 工作流描述
+  envId:
+    type: integer
+  stages:
+    type: array
+    items:
+      $ref: "#/components/schemas/StageUpdate"

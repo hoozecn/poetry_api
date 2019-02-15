@@ -7,4 +7,4 @@ properties:
     type: array
     description: 任务列表
     items:
-      $ref: "#/components/schemas/Job"
+      type: integer

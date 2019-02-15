@@ -9,8 +9,8 @@ properties:
   teams:
     type: array
     items:
-      $ref: "#/components/schemas/TeamLite"
+      type: integer
   publisher:
     type: array
     items:
-      $ref: "#/components/schemas/UserLite"
+      type: integer

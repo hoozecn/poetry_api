@@ -11,31 +11,31 @@ get:
     - ApiRootKeyAuth: []
   tags:
     - ProductManager
-  summary: 获取工作流列表
+  summary: 获取任务列表
   responses:
     '200':
       description: 获取成功
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/PipelineListResponse'
+            $ref: '#/components/schemas/JobListResponse'
 post:
   security:
     - ApiKeyAuth: []
     - ApiRootKeyAuth: []
   tags:
     - ProductManager
-  summary: 创建工作流
+  summary: 新建任务
   requestBody:
-    description: 添加产品请求
+    description: 添加任务请求
     content:
       application/json:
         schema:
-          $ref: "#/components/schemas/PipelineUpsertRequest"
+          $ref: "#/components/schemas/JobUpsertRequest"
   responses:
     '200':
-      description: 创建成功
+      description: 添加成功
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/Pipeline'
+            $ref: '#/components/schemas/Job'

@@ -12,3 +12,7 @@ properties:
   link:
     type: string
     description: 应用包地址
+  type:
+    type: string
+    enum: ['image', 'object']
+    description: image为镜像，object为压缩文件
