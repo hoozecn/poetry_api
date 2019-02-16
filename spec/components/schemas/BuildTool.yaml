@@ -3,7 +3,10 @@ description: 构建工具列表
 properties:
   name:
     type: string
-    description: 工具名称如 golang:1.11
+    description: 工具名称如 golang
+  version:
+    type: string
+    description: 工具版本如 1.11
   desc:
     type: string
     description: 工具描述

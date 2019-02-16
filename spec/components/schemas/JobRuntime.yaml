@@ -6,4 +6,7 @@ properties:
   cap:
     type: string
     enum: ['high', 'medium', 'low']
-  
+  buildTools:
+    type: array
+    items:
+      $ref: "#/components/schemas/BuildTool"
