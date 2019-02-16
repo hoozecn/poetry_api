@@ -1,6 +1,6 @@
 parameters:
   - name: jobId
-    in: query
+    in: path
     description: 任务Id
     required: true
     schema:

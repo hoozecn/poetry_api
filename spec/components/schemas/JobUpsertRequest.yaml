@@ -1,6 +1,6 @@
 type: object
+description: 测试任务需要包含 buildConf和testConf
 properties:
-  description: 测试任务需要包含 buildConf和testConf
   type:
     $ref: "#/components/schemas/JobType"
   services:
