@@ -1,0 +1,6 @@
+type: string
+enum: 
+  - test
+  - build
+  - deploy
+description: 任务类型

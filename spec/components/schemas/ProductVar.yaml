@@ -1,5 +1,5 @@
 type: object
-description: "产品全局变量"
+description: "产品全局变量, 当secured=true时，defaultValue必须为null"
 properties:
   key:
     type: string

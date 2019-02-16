@@ -1,0 +1,22 @@
+type: object
+description: 部署配置
+properties:
+  containerized:
+    type: boolean
+    description: 容器化部署
+  scripts:
+    description: 运行脚本 (仅当containerized=false时有效)
+    type: array
+    items:
+      type: string
+  k8sTemplates:
+    description: k8syaml文件 (仅当containerized=true时有效)
+    type: array
+    items:
+      type: string
+  useLatestArtifact:
+    type: boolean
+    description: 使用最新的应用包
+  artifact:
+    $ref: "#/components/schemas/Artifact"
+    description: 仅当useLatestArtifact=false时有效

@@ -1,0 +1,12 @@
+type: object
+description: 构建工具列表
+properties:
+  name:
+    type: string
+    description: 工具名称如 golang:1.11
+  desc:
+    type: string
+    description: 工具描述
+  os:
+    type: string
+    description: "操作系统如 ubuntu:14.04"

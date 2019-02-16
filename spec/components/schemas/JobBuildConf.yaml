@@ -1,0 +1,72 @@
+type: object
+description: 构建任务配置
+properties:
+  caches:
+    type: array
+    items:
+      type: string
+  scripts:
+    description: 运行脚本
+    type: array
+    items:
+      type: string
+  cleanWorkspace:
+    description: 设置是否清空工作目录
+    type: boolean
+  packaging:
+    type: object
+    description: |
+      打包方式.
+      如打包成压缩文件 apache-tomcat-8.5.38.tar.gz, 则name=apache-tomcat, versioning=custom, version=8.5.38, type=tar
+      如打包成镜像 registry.example.com/foo/bar:20190101121100, 则name=foo/bar, versioning=timestamp, type=image
+    properties:
+      type:
+        type: string
+        enum:
+          - image
+          - zip
+          - tar
+        description: image表示打包成镜像，tar和zip表示打包成压缩文件
+      name:
+        type: string
+        description: 打包名称前缀, 如 tomcat
+      versioning:
+        type: string
+        enum:
+          - ref
+          - timestamp
+          - custom
+        description: 包版本生成模式，ref表示依赖代码库的分支或者tag名称, custom为自定义版本号
+      version:
+        type: string
+        description: 自定义版本号
+  repositories:
+    type: array
+    items:
+      type: object
+      description: 代码库
+      properties:
+        codehost:
+          type: object
+          properties:
+            id:
+              type: integer
+              description: 代码库ID
+            address:
+              type: string
+              description: 代码库地址
+            type:
+              type: string
+              enum: ['gitlab', 'github']
+        namespace:
+          type: string
+          description: 命名空间 (user/group)
+        name:
+          type: string
+          description: 代码库名称
+        branch:
+          type: string
+          description: 分支名
+        submodule:
+          type: boolean
+          description: 是否同步子模块

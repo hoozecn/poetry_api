@@ -1,0 +1,9 @@
+type: object
+description: 运算能力
+properties:
+  name:
+    type: string
+    enum: ['high', 'median', 'low']
+  desc:
+    type: string
+    description: "CPU和内存配置, 如 high: 4 Core 8G Memory, medium: 2 Core 4G Memory, low: 1Core 2G Memory"

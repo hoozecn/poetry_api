@@ -1,11 +1,6 @@
 type: object
 properties:
-  id:
-    type: integer
-    description: 任务ID
-  name:
-    type: string
-    description: 任务名称
+  description: 测试任务需要包含 buildConf和testConf
   type:
     $ref: "#/components/schemas/JobType"
   services:
@@ -17,14 +12,9 @@ properties:
         id:
           type: integer
           description: 服务ID
-        name:
-          type: string
-          description: 服务名称
   timeout:
     type: integer
     description: 超时时间(秒)
-  runtime:
-    $ref: "#/components/schemas/JobRuntime"
   vars:
     $ref: "#/components/schemas/JobVars"
   buildConf:
@@ -32,4 +22,4 @@ properties:
   deployConf:
    $ref: "#/components/schemas/JobDeployConf"
   testConf:
-    $ref: "#/components/schemas/JobTestConf"
+   $ref: "#/components/schemas/JobTestConf"
