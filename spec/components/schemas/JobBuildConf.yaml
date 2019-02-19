@@ -38,9 +38,6 @@ properties:
           - ref
           - custom
         description: 包版本生成模式，ref表示依赖代码库的branch或者pr号, custom为自定义版本号
-      location:
-        type: string
-        description: 打包类型为 zip或者tar时有效，相对构建根目录的包位置
       version:
         type: string
         description: 自定义版本号

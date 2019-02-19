@@ -14,3 +14,6 @@ properties:
   revision:
     type: string
     description: 配置模板版本
+  type:
+    type: string
+    enum: ['spec', 'conf']

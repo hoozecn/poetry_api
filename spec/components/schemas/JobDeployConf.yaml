@@ -9,14 +9,9 @@ properties:
     type: array
     items:
       type: string
-  k8sTemplates:
-    description: k8syaml文件 (仅当containerized=true时有效)
-    type: array
-    items:
-      type: string
   useLatestArtifact:
     type: boolean
-    description: 使用最新的应用包
+    description: 使用最新的应用包 (仅当containerized=false时有效)
   artifact:
     $ref: "#/components/schemas/Artifact"
-    description: 仅当useLatestArtifact=false时有效
+    description: 仅当useLatestArtifact=false时有效 (仅当containerized=false时有效)
