@@ -17,7 +17,7 @@ post:
     content:
       application/json:
         schema:
-          $ref: "#/components/schemas/ServiceCreateRequest"
+          $ref: "#/components/schemas/Service"
   responses:
     '200':
       description: 添加成功

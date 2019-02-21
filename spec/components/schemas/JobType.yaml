@@ -4,3 +4,4 @@ enum:
   - build
   - deploy
 description: 任务类型
+example: build

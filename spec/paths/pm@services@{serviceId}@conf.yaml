@@ -17,7 +17,7 @@ put:
     content:
       application/json:
         schema:
-          $ref: "#/components/schemas/ServiceConfUpdateRequest"
+          $ref: "#/components/schemas/ServiceConfList"
   responses:
     '200':
       description: 更新成功

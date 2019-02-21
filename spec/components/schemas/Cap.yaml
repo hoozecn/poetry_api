@@ -3,7 +3,16 @@ description: 运算能力
 properties:
   name:
     type: string
-    enum: ['high', 'median', 'low']
+    enum: ['high', 'median', 'low', 'tiny']
   desc:
     type: string
-    description: "CPU和内存配置, 如 high: 4 Core 8G Memory, medium: 2 Core 4G Memory, low: 1Core 2G Memory"
+    description: |
+      CPU和内存配置,
+      如
+        high: 8核 16G内存
+        medium: 4核 8G内存
+        low: 2核 4G内存
+        tiny: 1核 4G内存
+required:
+  - name
+  - desc

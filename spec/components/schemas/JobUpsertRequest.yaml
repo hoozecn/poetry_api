@@ -1,11 +1,10 @@
 type: object
-description: 测试任务需要包含 buildConf和testConf
+description: 测试任务需要包含buildConf和testConf
 properties:
   type:
     $ref: "#/components/schemas/JobType"
   services:
     type: array
-    description: 任务类型为deploy时,最多只能有一个service
     items:
       type: object
       properties:
@@ -23,3 +22,8 @@ properties:
    $ref: "#/components/schemas/JobDeployConf"
   testConf:
    $ref: "#/components/schemas/JobTestConf"
+required:
+  - type
+  - services
+  - timeout
+  - vars

@@ -15,3 +15,7 @@ properties:
   artifact:
     $ref: "#/components/schemas/Artifact"
     description: 仅当useLatestArtifact=false时有效 (仅当containerized=false时有效)
+required:
+  - containerized
+  - scripts
+  - useLatestArtifact

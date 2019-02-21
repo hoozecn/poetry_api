@@ -21,7 +21,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/ServiceConfRevisionListResponse'
+            $ref: '#/components/schemas/ServiceConfRevisionList'
       headers:
         X-Total:
           $ref: "#/components/headers/X-Total"

@@ -18,6 +18,10 @@ put:
       application/json:
         schema:
           $ref: "#/components/schemas/Env"
+        example:
+          name: 测试
+          desc: 测试环境
+          forIt: true
   responses:
     '200':
       description: 更新成功

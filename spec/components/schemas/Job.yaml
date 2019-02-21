@@ -3,26 +3,31 @@ properties:
   id:
     type: integer
     description: 任务ID
+    example: 1
   name:
     type: string
     description: 任务名称
+    example: aurora构建任务
   type:
     $ref: "#/components/schemas/JobType"
   services:
     type: array
-    description: 任务类型为deploy时,最多只能有一个service
+    description: 关联的service
     items:
       type: object
       properties:
         id:
           type: integer
           description: 服务ID
+          example: 1
         name:
           type: string
           description: 服务名称
+          example: aurora-doc
   timeout:
     type: integer
     description: 超时时间(秒)
+    example: 60
   runtime:
     $ref: "#/components/schemas/JobRuntime"
   vars:
@@ -33,3 +38,9 @@ properties:
    $ref: "#/components/schemas/JobDeployConf"
   testConf:
     $ref: "#/components/schemas/JobTestConf"
+required:
+  - id
+  - name
+  - type
+  - services
+  - timeout

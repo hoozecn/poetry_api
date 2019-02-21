@@ -5,14 +5,17 @@ properties:
     type: array
     items:
       type: string
+      example: ./cache
   scripts:
     description: 运行脚本
     type: array
     items:
       type: string
+      example: echo "hello world"
   cleanWorkspace:
     description: 设置是否清空工作目录
     type: boolean
+    example: false
   packaging:
     type: object
     description: |
@@ -28,6 +31,7 @@ properties:
           - zip
           - tar
         description: image表示打包成镜像，tar和zip表示打包成压缩文件
+        example: image
       name:
         type: string
         description: 打包名称前缀, 如 tomcat
@@ -38,9 +42,14 @@ properties:
           - ref
           - custom
         description: 包版本生成模式，ref表示依赖代码库的branch或者pr号, custom为自定义版本号
+        example: ref
       version:
         type: string
         description: 自定义版本号
+        example: '1.0.0'
+    required:
+      - type
+      - versioning
   repositories:
     type: array
     items:
@@ -53,21 +62,40 @@ properties:
             id:
               type: integer
               description: 代码库ID
+              example: 1
             address:
               type: string
               description: 代码库地址
+              readOnly: true
+              example: 'gitlab.8slan.com'
             type:
               type: string
               enum: ['gitlab', 'github']
+              readOnly: true
+              example: gitlab
         namespace:
           type: string
           description: 命名空间 (user/group)
+          example: odf
         name:
           type: string
           description: 代码库名称
+          example: poetry
         branch:
           type: string
           description: 分支名
+          example: master
         submodule:
           type: boolean
           description: 是否同步子模块
+          example: false
+      required:
+        - codehost
+        - namespace
+        - name
+required:
+  - caches
+  - scripts
+  - cleanWorkspace
+  - packaging
+  - repositories

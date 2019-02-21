@@ -19,6 +19,18 @@ get:
         application/json:
           schema:
             $ref: '#/components/schemas/ProjectListResponse'
+          example:
+            - id: 1
+              name: poetry
+              desc: peotry 产品线
+              teams:
+                - id: 1
+                  name: Poetry开发组
+              publisher:
+                - id: 2
+                  name: Alex
+                - id: 3
+                  name: Bob
 post:
   security:
     - ApiKeyAuth: []
@@ -32,6 +44,14 @@ post:
       application/json:
         schema:
           $ref: "#/components/schemas/ProjectUpsertRequest"
+        example:
+          name: poetry
+          desc: peotry 产品
+          teams:
+            - 1
+            - 2
+          publisher:
+            - 1
   responses:
     '200':
       description: 添加成功

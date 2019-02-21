@@ -4,16 +4,16 @@ get:
     - ApiRootKeyAuth: []
   tags:
     - ProjectManager
-  summary: 运算能力列表
+  summary: 基础构建系统
   responses:
     '200':
       description: 获取成功
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/CapListResponse'
+            $ref: '#/components/schemas/BuildOSListResponse'
           example:
-            - name: high
-              desc: 8核16GB内存
-            - name: median
-              desc: 4核8GB内存
+            - name: ubuntu:14.04
+              desc: ubuntu Trusty
+            - name: ubuntu:16.04
+              desc: ubuntu Xenial

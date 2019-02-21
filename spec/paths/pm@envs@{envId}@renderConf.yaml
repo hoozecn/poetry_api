@@ -22,6 +22,11 @@ post:
             deployment.yaml
           serviceB/
             service.yaml
+      content:
+        application/tar+gzip:
+          schema:
+            type: string
+            format: binary
       headers:
         Content-Disposition:
           schema:
@@ -37,3 +42,6 @@ post:
         application/json:
           schema:
             $ref: '#/components/schemas/ActionResult'
+          example:
+            resultCode: 10100
+            errorMsg: "找不到Service-A 中的SUPER_KEY的值"
