@@ -1,0 +1,9 @@
+type: object
+properties:
+  id:
+    type: integer
+  created:
+    type: string
+    description: 创建时间
+  conf:
+    $ref: "/components/schemas/ServiceConf"

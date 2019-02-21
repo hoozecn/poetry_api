@@ -10,7 +10,7 @@ get:
     - ApiKeyAuth: []
     - ApiRootKeyAuth: []
   tags:
-    - ProductManager
+    - ProjectManager
   summary: 获取任务详情
   responses:
     '200':
@@ -24,7 +24,7 @@ put:
     - ApiKeyAuth: []
     - ApiRootKeyAuth: []
   tags:
-    - ProductManager
+    - ProjectManager
   summary: 更新任务
   requestBody:
     description: 更新任务请求
@@ -44,7 +44,7 @@ delete:
     - ApiKeyAuth: []
     - ApiRootKeyAuth: []
   tags:
-    - ProductManager
+    - ProjectManager
   summary: 删除任务
   responses:
     '200':

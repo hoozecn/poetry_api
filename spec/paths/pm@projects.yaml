@@ -10,7 +10,7 @@ get:
     - ApiKeyAuth: []
     - ApiRootKeyAuth: []
   tags:
-    - ProductManager
+    - ProjectManager
   summary: 获取产品列表
   responses:
     '200':
@@ -18,24 +18,24 @@ get:
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/ProductListResponse'
+            $ref: '#/components/schemas/ProjectListResponse'
 post:
   security:
     - ApiKeyAuth: []
     - ApiRootKeyAuth: []
   tags:
-    - ProductManager
+    - ProjectManager
   summary: 新建产品
   requestBody:
     description: 添加产品请求
     content:
       application/json:
         schema:
-          $ref: "#/components/schemas/ProductUpsertRequest"
+          $ref: "#/components/schemas/ProjectUpsertRequest"
   responses:
     '200':
       description: 添加成功
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/Product'
+            $ref: '#/components/schemas/Project'

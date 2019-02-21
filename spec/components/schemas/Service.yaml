@@ -9,9 +9,3 @@ properties:
   containerized:
     type: boolean
     description: 是否容器化 (true = 容器化)
-  confs:
-    type: array
-    items:
-      $ref: "#/components/schemas/ServiceConf"
-  latestArtifact:
-    $ref: "#/components/schemas/Artifact"

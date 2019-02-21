@@ -1,4 +1,4 @@
 type: array
 description: "更新产品全局变量请求(全量)"
 items:
-  $ref: "#/components/schemas/ProductVar"
+  $ref: "#/components/schemas/ProjectVar"

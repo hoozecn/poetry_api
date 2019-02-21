@@ -1,0 +1,7 @@
+type: object
+description: commit信息
+properties:
+  hash:
+    type: string
+  comment:
+    type: string

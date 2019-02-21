@@ -1,6 +1,6 @@
 parameters:
   - name: envId
-    in: query
+    in: path
     description: 环境ID
     required: true
     schema:
@@ -10,14 +10,14 @@ put:
     - ApiKeyAuth: []
     - ApiRootKeyAuth: []
   tags:
-    - ProductManager
+    - ProjectManager
   summary: 全量更新环境变量, 覆盖默认值
   requestBody:
     description: 更新环境变量请求
     content:
       application/json:
         schema:
-          $ref: "#/components/schemas/EnvVarBatchUpdateRequest"
+          $ref: "#/components/schemas/EnvVarList"
   responses:
     '200':
       description: 更新成功
@@ -25,3 +25,17 @@ put:
         application/json:
           schema:
             $ref: '#/components/schemas/ActionResult'
+get:
+  security:
+    - ApiKeyAuth: []
+    - ApiRootKeyAuth: []
+  tags:
+    - ProjectManager
+  summary: 全量更新环境变量, 覆盖默认值
+  responses:
+    '200':
+      description: 更新成功
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/EnvVarList'

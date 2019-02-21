@@ -1,5 +1,5 @@
 parameters:
-  - name: productId
+  - name: projectId
     in: query
     description: 产品ID
     required: true
@@ -10,7 +10,7 @@ post:
     - ApiKeyAuth: []
     - ApiRootKeyAuth: []
   tags:
-    - ProductManager
+    - ProjectManager
   summary: 添加产品环境
   requestBody:
     description: 添加产品环境请求

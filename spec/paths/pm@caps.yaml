@@ -3,7 +3,7 @@ get:
     - ApiKeyAuth: []
     - ApiRootKeyAuth: []
   tags:
-    - ProductManager
+    - ProjectManager
   summary: 运算能力列表
   responses:
     '200':

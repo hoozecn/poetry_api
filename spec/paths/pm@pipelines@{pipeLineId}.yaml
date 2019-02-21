@@ -10,7 +10,7 @@ get:
     - ApiKeyAuth: []
     - ApiRootKeyAuth: []
   tags:
-    - ProductManager
+    - ProjectManager
   summary: 获取工作流
   responses:
     '200':
@@ -24,7 +24,7 @@ put:
     - ApiKeyAuth: []
     - ApiRootKeyAuth: []
   tags:
-    - ProductManager
+    - ProjectManager
   summary: 更新工作流
   requestBody:
     description: 更新工作流请求
@@ -44,7 +44,7 @@ delete:
     - ApiKeyAuth: []
     - ApiRootKeyAuth: []
   tags:
-    - ProductManager
+    - ProjectManager
   summary: 删除工作流
   responses:
     '200':

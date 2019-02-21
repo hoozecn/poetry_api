@@ -1,6 +1,12 @@
 parameters:
-  - name: envId
+  - name: serviceId
     in: path
+    description: 服务配置ID
+    required: true
+    schema:
+      type: integer
+  - name: envName
+    in: query
     description: 环境ID
     required: true
     schema:
@@ -11,17 +17,10 @@ post:
     - ApiRootKeyAuth: []
   tags:
     - ProjectManager
-  summary: 批量渲染服务配置
+  summary: 渲染服务配置
   responses:
     '200':
-      description: |
-        渲染成功,tar.gz包,包含该环境下所有完成渲染的配置文件, 如:
-        /
-          serviceA/
-            a.conf
-            deployment.yaml
-          serviceB/
-            service.yaml
+      description: 渲染成功,tar.gz包,包含该环境下所有完成渲染的配置文件
       headers:
         Content-Disposition:
           schema:

@@ -1,7 +1,7 @@
 parameters:
-  - name: envId
+  - name: serviceId
     in: path
-    description: 环境ID
+    description: 服务Id
     required: true
     schema:
       type: integer
@@ -11,31 +11,31 @@ put:
     - ApiRootKeyAuth: []
   tags:
     - ProjectManager
-  summary: 更新产品环境
+  summary: 更新服务配置
   requestBody:
-    description: 更新产品环境请求
+    description: 更新服务配置请求
     content:
       application/json:
         schema:
-          $ref: "#/components/schemas/Env"
+          $ref: "#/components/schemas/ServiceConfUpdateRequest"
   responses:
     '200':
       description: 更新成功
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/ActionResult'
-delete:
+            $ref: '#/components/schemas/ServiceConfRevision'
+get:
   security:
     - ApiKeyAuth: []
     - ApiRootKeyAuth: []
   tags:
     - ProjectManager
-  summary: 删除产品环境
+  summary: 获取服务配置
   responses:
     '200':
-      description: 删除成功
+      description: 更新成功
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/ActionResult'
+            $ref: '#/components/schemas/ServiceConfRevision'

@@ -1,16 +1,16 @@
 parameters:
-  - name: productId
+  - name: projectId
     in: path
     description: 产品ID
     required: true
     schema:
-      type: integer
+      type: string
 get:
   security:
     - ApiKeyAuth: []
     - ApiRootKeyAuth: []
   tags:
-    - ProductManager
+    - ProjectManager
   summary: 获取产品详情
   responses:
     '200':
@@ -18,20 +18,20 @@ get:
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/Product'
+            $ref: '#/components/schemas/Project'
 patch:
   security:
     - ApiKeyAuth: []
     - ApiRootKeyAuth: []
   tags:
-    - ProductManager
+    - ProjectManager
   summary: 更新产品
   requestBody:
     description: 产品参数
     content:
       application/json:
         schema:
-          $ref: "#/components/schemas/ProductUpsertRequest"
+          $ref: "#/components/schemas/ProjectUpsertRequest"
   responses:
     '200':
       description: 更新成功
@@ -44,7 +44,7 @@ delete:
     - ApiKeyAuth: []
     - ApiRootKeyAuth: []
   tags:
-    - ProductManager
+    - ProjectManager
   summary: 删除产品
   responses:
     '200':

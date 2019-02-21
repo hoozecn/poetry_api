@@ -1,5 +1,5 @@
 type: object
-description: 构建工具列表
+description: 构建工具
 properties:
   name:
     type: string
@@ -13,3 +13,17 @@ properties:
   os:
     type: string
     description: "操作系统如 ubuntu:14.04"
+  binPath:
+    type: string
+    description: bin路径，构建时会被加入环境变量PATH
+  enabled:
+    type: boolean
+  scripts:
+    type: string
+    description: 安装脚本
+  updated:
+    type: string
+    description: 更新时间
+  updatedBy:
+    type: string
+    description: 更新者

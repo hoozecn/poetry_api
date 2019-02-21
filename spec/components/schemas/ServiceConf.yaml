@@ -1,10 +1,9 @@
 type: object
 properties:
-  id:
-    type: integer
   name:
     type: string
     description: 配置名称
+    pattern: '[a-z0-9A-Z-_\.]+'
   content:
     type: string
     description: 服务配置模板内容

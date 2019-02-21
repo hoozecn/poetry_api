@@ -3,16 +3,20 @@ properties:
   id:
     type: integer
     description: 应用包ID
-  name:
+  serviceName:
     type: string
-    description: 名称
+    description: 服务名
   created:
     type: string
     description: 生成日期
-  link:
+  image:
     type: string
-    description: 应用包地址
-  type:
+    description: 镜像地址 如 registry.example.com/release-candidates/poetry:20180101120000-master
+  package:
     type: string
-    enum: ['image', 'object']
-    description: image为镜像，object为压缩文件
+    description: 应用包地址 如 /dist/release-candidates/poetry-20180101112000-master.tar.gz
+  repositories:
+    description: 包来源
+    type: array
+    items:
+      $ref: "#/components/schemas/ArtifactRepository"
