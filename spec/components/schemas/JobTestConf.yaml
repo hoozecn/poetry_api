@@ -8,7 +8,8 @@ properties:
   reportLocation:
     type: array
     description: 测试结果路径
-    items: string
+    items:
+      type: string
     example:
       - './reports/report.xml'
       - './reports/it/*.jacoco'
