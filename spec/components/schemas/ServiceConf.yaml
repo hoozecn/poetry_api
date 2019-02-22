@@ -1,31 +1,10 @@
-type: object
-properties:
-  name:
-    type: string
-    description: 配置名称
-    pattern: '[a-z0-9A-Z-_\.]+'
-    example: lan.properties
-  content:
-    type: string
-    description: 服务配置模板内容
-    example: |
-      language=zh_cn
-      timezone=shanghai
-  language:
-    type: string
-    description: 配置语言如yaml,plain,properties,ini
-    example: properties
-  updated:
-    type: string
-    description: 更新时间
-    readOnly: true
-  updatedBy:
-    type: string
-    description: 更新人
-    example: bob
-    readOnly: true
-  type:
-    type: string
-    enum: ['spec', 'conf']
-    example: spec
-    description: 配置类型，spec是k8syaml文件，conf是普通配置文件
+allOf:
+  - $ref: "#/components/schemas/ServiceConfLite"
+  - type: object
+    properties:
+      content:
+        type: string
+        description: 服务配置模板内容
+        example: |
+          language=zh_cn
+          timezone=shanghai

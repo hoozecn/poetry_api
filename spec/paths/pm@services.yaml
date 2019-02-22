@@ -24,4 +24,18 @@ post:
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/Service'
+            $ref: '#/components/schemas/ServiceWithConf'
+get:
+  security:
+    - ApiKeyAuth: []
+    - ApiRootKeyAuth: []
+  tags:
+    - ProjectManager
+  summary: 获取服务列表
+  responses:
+    '200':
+      description: 获取成功
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ServiceList'

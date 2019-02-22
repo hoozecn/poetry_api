@@ -16,39 +16,7 @@ properties:
     description: 设置是否清空工作目录
     type: boolean
     example: false
-  packaging:
-    type: object
-    description: |
-      打包方式.
-      如打包成压缩文件 apache-tomcat-8.5.38-20190101-1.tar.gz, 则name=apache-tomcat, versioning=custom, version=8.5.38, fileType=tar
-      如打包成压缩文件 tomcat-pr/1-20190101-1.zip, 则name=tomcat, versioning=ref, fileType=zip
-      如打包成镜像 registry.example.com/foo/bar:20190101-1, 则name=foo/bar, versioning=none
-    properties:
-      fileType:
-        type: string
-        enum:
-          - zip
-          - tar
-        description: tar和zip表示压缩文件格式
-        example: tar
-      name:
-        type: string
-        description: 打包名称前缀, 如 tomcat
-      versioning:
-        type: string
-        enum:
-          - none
-          - ref
-          - custom
-        description: 包版本生成模式，ref表示依赖代码库的branch或者pr号, custom为自定义版本号
-        example: ref
-      version:
-        type: string
-        description: 自定义版本号
-        example: '1.0.0'
-    required:
-      - type
-      - versioning
+  # packaging： 删除，不提供自定义选择, 可以在下载包时自定义名称
   repositories:
     type: array
     items:
