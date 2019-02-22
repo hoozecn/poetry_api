@@ -4,7 +4,7 @@ get:
     - ApiRootKeyAuth: []
   tags:
     - ProjectManager
-  summary: 基础构建系统
+  summary: 获取基础构建系统列表
   responses:
     '200':
       description: 获取成功

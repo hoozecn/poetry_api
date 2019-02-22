@@ -33,27 +33,30 @@ get:
     - ApiRootKeyAuth: []
   tags:
     - ProjectManager
-  summary: 全量更新环境变量, 覆盖默认值
+  summary: 获取环境变量
   responses:
     '200':
       description: | 
         环境变量列表
-        - key: MYSQL_ADDR
-          value: mysql://mysql:3306/me
-          isDefault: false
-          secured: false
-          defaultValue: mysql://mysql:3306/foo
-        - key: MONGO_ADDR
-          value: mongo://mongo:27017/me
-          isDefault: true
-          secured: false
-          defaultValue: mongo://mongo:27017/me
-        - key: SUPER_KEY
-          value: '*******'
-          secured: true
-          isDefault: false
-          defaultValue: '******'
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/EnvVarList'
+          examples:
+            "example one":
+              value:
+              - key: MYSQL_ADDR
+                value: mysql://mysql:3306/me
+                isDefault: false
+                secured: false
+                defaultValue: mysql://mysql:3306/foo
+              - key: MONGO_ADDR
+                value: mongo://mongo:27017/me
+                isDefault: true
+                secured: false
+                defaultValue: mongo://mongo:27017/me
+              - key: SUPER_KEY
+                value: '*******'
+                secured: true
+                isDefault: false
+                defaultValue: '******'

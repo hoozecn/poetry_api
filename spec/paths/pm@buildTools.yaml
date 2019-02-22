@@ -65,16 +65,6 @@ post:
               scripts: |
                 curl -fsSL http://spock-resources.qbox.net/go1.11.linux-amd64.tar.gz  -o /tmp/golang.tar.gz\n
                 tar -C $HOME -xzf /tmp/golang.tar.gz
-          'golang:1.9':
-            value:
-              name: golang
-              version: 1.9
-              desc: golang:1.11
-              binPath: /go/bin
-              enabled: true
-              scripts: |
-                curl -fsSL http://spock-resources.qbox.net/go1.9.linux-amd64.tar.gz  -o /tmp/golang.tar.gz
-                tar -C $HOME -xzf /tmp/golang.tar.gz
   responses:
     '200':
       description: 添加成功
