@@ -5,14 +5,14 @@ properties:
     description: 代码库地址，
     example: 8slan.gitlab.com/odf/poetry
   commit:
-    $ref: "/components/schemas/CodeCommit"
+    $ref: "#/components/schemas/CodeCommit"
   pr:
     type: object
     properties:
       commits:
         type: array
         items:
-          $ref: "/components/schemas/CodeCommit"
+          $ref: "#/components/schemas/CodeCommit"
       desc:
         type: string
         description: pr描述
