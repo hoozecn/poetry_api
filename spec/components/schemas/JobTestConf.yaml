@@ -6,9 +6,12 @@ properties:
     description: 测试通过率阈值
     example: 40.5
   reportLocation:
-    type: string
+    type: array
     description: 测试结果路径
-    example: './reports/report.xml'
+    items: string
+    example:
+      - './reports/report.xml'
+      - './reports/it/*.jacoco'
 required:
   - threshold
   - reportLocation

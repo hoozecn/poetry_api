@@ -13,11 +13,6 @@ properties:
     type: string
     description: 服务名称
     example: poetry-doc 服务
-  containerized:
-    type: boolean
-    description: 是否容器化 (true = 容器化)
-    example: true
 required:
   - id
   - name
-  - containerized

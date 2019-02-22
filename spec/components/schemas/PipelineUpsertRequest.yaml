@@ -15,8 +15,13 @@ properties:
     type: array
     items:
       $ref: "#/components/schemas/StageUpdate"
+  supportRelease:
+    type: boolean
+    description: 是否支持发布
+    example: false
 required:
   - name
   - desc
   - envId
   - stages
+  - supportRelease
