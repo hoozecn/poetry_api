@@ -21,7 +21,7 @@ post:
         example:
           name: test
           desc: 测试环境，跑集成测试用
-          forId: true
+          forIt: true
   responses:
     '200':
       description: 添加成功
@@ -33,4 +33,4 @@ post:
             id: 3
             name: dev
             desc: 最活跃环境，经常更新，不稳定
-            forId: false
+            forIt: false

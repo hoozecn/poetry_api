@@ -1,6 +1,9 @@
 type: object
 description: 测试任务需要包含buildConf和testConf
 properties:
+  name:
+    type: string
+    example: Poetry构建任务
   type:
     $ref: "#/components/schemas/JobType"
   services:
@@ -23,6 +26,7 @@ properties:
   testConf:
    $ref: "#/components/schemas/JobTestConf"
 required:
+  - name
   - type
   - services
   - timeout

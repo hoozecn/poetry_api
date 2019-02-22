@@ -20,18 +20,17 @@ properties:
     type: object
     description: |
       打包方式.
-      如打包成压缩文件 apache-tomcat-8.5.38-20190101-1.tar.gz, 则name=apache-tomcat, versioning=custom, version=8.5.38, type=tar
-      如打包成压缩文件 tomcat-pr/1-20190101-1.zip, 则name=tomcat, versioning=ref, type=zip
-      如打包成镜像 registry.example.com/foo/bar:20190101-1, 则name=foo/bar, versioning=none, type=image
+      如打包成压缩文件 apache-tomcat-8.5.38-20190101-1.tar.gz, 则name=apache-tomcat, versioning=custom, version=8.5.38, fileType=tar
+      如打包成压缩文件 tomcat-pr/1-20190101-1.zip, 则name=tomcat, versioning=ref, fileType=zip
+      如打包成镜像 registry.example.com/foo/bar:20190101-1, 则name=foo/bar, versioning=none
     properties:
-      type:
+      fileType:
         type: string
         enum:
-          - image
           - zip
           - tar
-        description: image表示打包成镜像，tar和zip表示打包成压缩文件
-        example: image
+        description: tar和zip表示压缩文件格式
+        example: tar
       name:
         type: string
         description: 打包名称前缀, 如 tomcat

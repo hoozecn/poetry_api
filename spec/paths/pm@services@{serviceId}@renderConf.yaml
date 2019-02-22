@@ -22,7 +22,7 @@ post:
     - ApiRootKeyAuth: []
   tags:
     - ProjectManager
-  summary: 渲染服务配置
+  summary: 渲染服务某个配置文件
   responses:
     '200':
       description: 配置结果
