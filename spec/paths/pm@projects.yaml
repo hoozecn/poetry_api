@@ -26,7 +26,7 @@ get:
               teams:
                 - id: 1
                   name: Poetry开发组
-              publisher:
+              releaser:
                 - id: 2
                   name: Alex
                 - id: 3
@@ -50,7 +50,7 @@ post:
           teams:
             - 1
             - 2
-          publisher:
+          releaser:
             - 1
   responses:
     '200':

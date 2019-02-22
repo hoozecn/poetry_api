@@ -19,7 +19,7 @@ properties:
     example:
       - id: 1
         name: Poetry开发组
-  publisher:
+  releaser:
     type: array
     items:
       $ref: "#/components/schemas/UserLite"

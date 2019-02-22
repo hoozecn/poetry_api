@@ -15,7 +15,7 @@ properties:
     example:
       - 1
       - 2
-  publisher:
+  releaser:
     type: array
     items:
       type: integer
