@@ -9,7 +9,7 @@ properties:
     type: string
     description: 服务名称
     example: poetry-doc
-  description:
+  desc:
     type: string
     description: 服务名称
     example: poetry-doc 服务
