@@ -11,5 +11,3 @@ properties:
     type: string
   theme:
     type: string
-  orgId:
-    type: integer

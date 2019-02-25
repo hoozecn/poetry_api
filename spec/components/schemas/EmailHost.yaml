@@ -14,5 +14,3 @@ properties:
     description: 在响应体隐藏
   isTlS:
     type: boolean
-  orgId:
-    type: integer

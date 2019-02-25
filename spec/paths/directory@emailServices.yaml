@@ -39,3 +39,13 @@ get:
         application/json:
           schema:
             $ref: '#/components/schemas/EmailService'
+delete:
+  tags:
+    - Directory
+  summary: 删除企业的邮件服务配置
+  security:
+    - ApiKeyAuth: []
+    - ApiRootKeyAuth: []
+  responses:
+    '200':
+      description: 删除成功

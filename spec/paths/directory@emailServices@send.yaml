@@ -1,3 +1,10 @@
+parameters:
+  - name: orgId
+    in: query
+    description: 组织ID
+    required: true
+    schema:
+      type: integer
 post:
   security:
     - ApiKeyAuth: []
@@ -7,13 +14,13 @@ post:
   summary: 发送邮件
   requestBody:
     description: 发送邮件参数
+    required: true
     content:
       application/json:
         schema:
-          type: object
-          properties:
-            email:
-              type: string
+          type: array
+          items:
+            $ref: '#/components/schemas/EmailAction'
   responses:
     "200":
       description: "发送成功"

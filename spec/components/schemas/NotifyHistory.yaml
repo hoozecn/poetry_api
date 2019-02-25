@@ -18,5 +18,3 @@ properties:
     type: string
   status:
     type: string
-  orgId:
-    type: integer
