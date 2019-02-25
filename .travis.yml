@@ -1,6 +1,8 @@
 language: node_js
 node_js:
   - "node"
+script:
+   - 'if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then npm run build && npm run gh-pages -- -p "$TRAVIS_PULL_REQUEST"; fi'
 deploy:
   - skip_cleanup: true
     provider: script
