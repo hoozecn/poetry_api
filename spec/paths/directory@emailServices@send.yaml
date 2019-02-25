@@ -1,0 +1,29 @@
+post:
+  security:
+    - ApiKeyAuth: []
+    - ApiRootKeyAuth: []
+  tags:
+    - Directory
+  summary: 发送邮件
+  requestBody:
+    description: 发送邮件参数
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            email:
+              type: string
+  responses:
+    "200":
+      description: "发送成功"
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ActionResult"
+    "500":
+      description: "发送失败"
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ActionResult"
