@@ -1,0 +1,12 @@
+type: object
+properties:
+  value:
+    type: string
+    required: true
+    example: "trusty"
+    description: "唯一ID"
+  label:
+    type: string
+    required: true
+    description: "描述信息"
+    example: "ubuntu 14.04"
