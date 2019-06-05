@@ -1,3 +1,10 @@
+parameters:
+  - name: id
+    in: path
+    description: 对象存储ID
+    required: true
+    schema:
+      type: integer
 get:
   tags:
     - spock

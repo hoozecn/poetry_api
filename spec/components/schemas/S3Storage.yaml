@@ -5,11 +5,13 @@ properties:
     description: 对象存储的ID
     readOnly: true
   update_time:
-    type: int
+    type: integer
     description: 更新时间
+    readOnly: true
   updated_by:
     type: string
     description: 更新者
+    readOnly: true
   ak:
     type: string
     description: access_key
@@ -36,5 +38,5 @@ required:
   - sk
   - endpoint
   - bucket
-  - insecre
+  - insecure
   - is_default
