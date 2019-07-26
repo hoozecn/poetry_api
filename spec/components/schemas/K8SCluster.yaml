@@ -51,3 +51,5 @@ properties:
 required:
 - id
 - name
+- status
+- yaml
