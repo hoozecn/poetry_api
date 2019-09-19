@@ -1,0 +1,11 @@
+jobs:
+- job: Linux
+  pool:
+    vmImage: 'ubuntu-16.04'
+  steps:
+    - task: Docker@2
+      inputs:
+        containerRegistry: 'dockerhub'
+        repository: 'hoozecn/play'
+        command: 'buildAndPush'
+        Dockerfile: '**/Dockerfile'
